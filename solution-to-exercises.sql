@@ -2,19 +2,19 @@
 #######################################################################
 
 
--- Exercise 2.1: Write a JOIN statement to get the result of 1.3
+-- Exercise 1.1: Write a JOIN statement to get the result of 1.3
 SELECT e.emp_no, e.first_name, e.last_name
 FROM employees e
 JOIN dept_manager dm
 ON e.emp_no = dm.emp_no;
     
--- Exercise 2.2: Retrieve a list of all managers that were 
+-- Exercise 1.2: Retrieve a list of all managers that were 
 -- employed between 1st January, 1990 and 1st January, 1995
 SELECT * FROM dept_manager
 WHERE emp_no IN (SELECT emp_no FROM employees 
 				 WHERE hire_date BETWEEN '1990-01-01' AND '1995-01-01');
 
--- Exercise 3.1: Retrieve a list of managers, their first, last, and their department names
+-- Exercise 2.1: Retrieve a list of managers, their first, last, and their department names
 
 -- Returns data from the employees table
 SELECT * FROM employees;
